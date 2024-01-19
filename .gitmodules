@@ -1,0 +1,3 @@
+[submodule "hydra"]
+	path = hydra
+	url = https://github.com/vanhauser-thc/thc-hydra

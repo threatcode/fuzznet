@@ -55,7 +55,7 @@ echo "                                      Port value set $port"
         else
 echo -e $red"                                    The port value should be 0-65535"$colorbase
 sleep 2
-./src/rdp_brute.sh
+./src/fuzznet.sh
 
 
 fi
@@ -75,7 +75,7 @@ echo "                                        The port value was set $port"
         else
 echo -e $red"                                     The port value must be 0-65535"$colorbase
 sleep 2
-./src/rdp_brute.sh
+./src/fuzznet.sh
 
 fi	
 fi
@@ -256,7 +256,7 @@ echo -e "$red-------------------------------------------------------------------
 echo -e "$yellow*To exit scan mode $red'CTRL+C'$colorbase"
 if [ "$scan" = "1" ]; then
 nmap -Pn -sS $target -p $port --open | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 CHECKFILERU
 	else
 rate_f () {
@@ -284,7 +284,7 @@ done
 
 masscan $target -p $port --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
 fi
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 CHECKFILERU
 
                          
@@ -321,7 +321,7 @@ echo -e "$red-------------------------------------------------------------------
 echo -e "$yellow*To exit scan mode $red'CTRL+C'$colorbase"
 if [ "$scan" = "1" ]; then
 nmap -Pn -sS -iL $listname -p $port --open | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 CHECKFILERU
 	else
 rate_f () {
@@ -348,7 +348,7 @@ done
 
 masscan -p $port -iL $listname --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
 fi
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 CHECKFILERU
 
 
@@ -380,7 +380,7 @@ MAINBRUTEMENURU
 else
 if [ "$menuoption" = "4" ]; then
 COUNTRYLIST
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 read -p "                          Выберите страну {1/2/3/& etc.}: " country
 clear
@@ -400,7 +400,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 
 echo ""
 rate_f () {
@@ -467,7 +467,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -536,7 +536,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -607,7 +607,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -675,7 +675,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -745,7 +745,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -814,7 +814,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -883,7 +883,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -951,7 +951,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1020,7 +1020,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1089,7 +1089,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1158,7 +1158,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1228,7 +1228,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1298,7 +1298,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1368,7 +1368,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1438,7 +1438,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1508,7 +1508,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1578,7 +1578,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1648,7 +1648,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1718,7 +1718,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1788,7 +1788,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1857,7 +1857,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1926,7 +1926,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -1995,7 +1995,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -2065,7 +2065,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -2134,7 +2134,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -2204,7 +2204,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -2274,7 +2274,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -2344,7 +2344,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -2414,7 +2414,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -2484,7 +2484,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -2554,7 +2554,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -2623,7 +2623,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -2693,7 +2693,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -2762,7 +2762,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -2831,7 +2831,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -2899,7 +2899,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -2969,7 +2969,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -3039,7 +3039,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -3109,7 +3109,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -3179,7 +3179,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -3249,7 +3249,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -3319,7 +3319,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -3389,7 +3389,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -3459,7 +3459,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -3529,7 +3529,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -3599,7 +3599,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -3669,7 +3669,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -3739,7 +3739,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -3809,7 +3809,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -3879,7 +3879,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -3949,7 +3949,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4019,7 +4019,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4089,7 +4089,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4159,7 +4159,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4229,7 +4229,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4299,7 +4299,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4369,7 +4369,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4439,7 +4439,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4508,7 +4508,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4578,7 +4578,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4648,7 +4648,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4718,7 +4718,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4787,7 +4787,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4857,7 +4857,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4927,7 +4927,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -4997,7 +4997,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -5067,7 +5067,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -5137,7 +5137,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -5207,7 +5207,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -5277,7 +5277,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -5347,7 +5347,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -5417,7 +5417,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -5487,7 +5487,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -5557,7 +5557,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -5627,7 +5627,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -5697,7 +5697,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -5767,7 +5767,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -5837,7 +5837,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -5907,7 +5907,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -5976,7 +5976,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -6045,7 +6045,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -6115,7 +6115,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -6185,7 +6185,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -6255,7 +6255,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -6325,7 +6325,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -6395,7 +6395,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -6465,7 +6465,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -6535,7 +6535,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -6605,7 +6605,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -6675,7 +6675,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -6745,7 +6745,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -6814,7 +6814,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -6883,7 +6883,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -6953,7 +6953,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -7023,7 +7023,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -7093,7 +7093,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -7163,7 +7163,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -7233,7 +7233,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -7303,7 +7303,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -7373,7 +7373,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -7443,7 +7443,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -7513,7 +7513,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -7583,7 +7583,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -7653,7 +7653,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -7723,7 +7723,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -7793,7 +7793,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -7863,7 +7863,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -7933,7 +7933,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8003,7 +8003,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8072,7 +8072,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8142,7 +8142,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8212,7 +8212,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8282,7 +8282,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8352,7 +8352,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8422,7 +8422,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8492,7 +8492,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8561,7 +8561,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8631,7 +8631,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8701,7 +8701,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8771,7 +8771,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8841,7 +8841,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8911,7 +8911,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -8981,7 +8981,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -9051,7 +9051,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -9120,7 +9120,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -9190,7 +9190,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -9260,7 +9260,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -9330,7 +9330,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -9400,7 +9400,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -9470,7 +9470,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -9540,7 +9540,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -9610,7 +9610,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -9680,7 +9680,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -9750,7 +9750,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -9820,7 +9820,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -9890,7 +9890,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -9960,7 +9960,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -10030,7 +10030,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -10100,7 +10100,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -10170,7 +10170,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -10238,7 +10238,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -10308,7 +10308,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -10377,7 +10377,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -10447,7 +10447,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -10517,7 +10517,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -10587,7 +10587,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -10657,7 +10657,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -10727,7 +10727,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -10797,7 +10797,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -10867,7 +10867,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -10937,7 +10937,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11007,7 +11007,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11077,7 +11077,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11147,7 +11147,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11217,7 +11217,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11287,7 +11287,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11357,7 +11357,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11427,7 +11427,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11497,7 +11497,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11567,7 +11567,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11637,7 +11637,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11707,7 +11707,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11777,7 +11777,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11847,7 +11847,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11917,7 +11917,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -11987,7 +11987,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -12055,7 +12055,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -12124,7 +12124,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -12193,7 +12193,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -12262,7 +12262,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -12331,7 +12331,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -12400,7 +12400,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -12469,7 +12469,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -12538,7 +12538,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -12608,7 +12608,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -12678,7 +12678,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -12747,7 +12747,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -12816,7 +12816,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -12885,7 +12885,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -12955,7 +12955,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13024,7 +13024,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13094,7 +13094,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13164,7 +13164,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13233,7 +13233,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13303,7 +13303,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13373,7 +13373,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13443,7 +13443,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13513,7 +13513,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13583,7 +13583,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13653,7 +13653,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13722,7 +13722,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13791,7 +13791,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13861,7 +13861,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13930,7 +13930,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -13999,7 +13999,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -14068,7 +14068,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -14137,7 +14137,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -14206,7 +14206,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -14276,7 +14276,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -14345,7 +14345,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -14415,7 +14415,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -14485,7 +14485,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -14547,7 +14547,7 @@ echo -e "$aquamarine                                  Проверяем на н
 
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
 echo -e "$yellow*To exit scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Exit to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Exit to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 
 rate_f () {
@@ -14833,7 +14833,7 @@ echo -e "$red-------------------------------------------------------------------
 echo -e "$yellow*To exit the scan mode $red'CTRL+C'$colorbase"
 if [ "$scan" = "1" ]; then
 nmap -Pn -sS $target -p $port --open  | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 CHECKFILEEN
 
 	else
@@ -14862,7 +14862,7 @@ done
 
 masscan $target -p $port --open-only  --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
 fi
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 CHECKFILEEN
 
 echo ""
@@ -14918,7 +14918,7 @@ done
 masscan -p $port -iL listname --open-only --max-rate $rate| grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
 
 
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 CHECKFILEEN
 
 echo ""
@@ -14949,7 +14949,7 @@ MAINBRUTEMENUEN
 else
 if [ "$menuoption" = "4" ]; then
 COUNTRYLIST
-trap 'echo ""; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo ""; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 read -p "                                 Choose the country {1/2/3/& etc.}: " country
 clear
@@ -14971,7 +14971,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 
 echo ""
 rate_f () {
@@ -15036,7 +15036,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -15102,7 +15102,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -15170,7 +15170,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -15236,7 +15236,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -15303,7 +15303,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -15369,7 +15369,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -15435,7 +15435,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -15500,7 +15500,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -15566,7 +15566,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -15632,7 +15632,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -15698,7 +15698,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -15765,7 +15765,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -15832,7 +15832,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -15899,7 +15899,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -15966,7 +15966,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16033,7 +16033,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16100,7 +16100,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16167,7 +16167,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16234,7 +16234,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16301,7 +16301,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16367,7 +16367,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16433,7 +16433,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16499,7 +16499,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16566,7 +16566,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16632,7 +16632,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16699,7 +16699,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16766,7 +16766,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16833,7 +16833,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16900,7 +16900,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -16967,7 +16967,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17034,7 +17034,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17100,7 +17100,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17167,7 +17167,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17233,7 +17233,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17299,7 +17299,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17364,7 +17364,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17431,7 +17431,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17498,7 +17498,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17565,7 +17565,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17632,7 +17632,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17699,7 +17699,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17766,7 +17766,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17833,7 +17833,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17900,7 +17900,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -17967,7 +17967,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18034,7 +18034,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18101,7 +18101,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18168,7 +18168,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18235,7 +18235,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18302,7 +18302,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18369,7 +18369,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18436,7 +18436,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18503,7 +18503,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18570,7 +18570,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18637,7 +18637,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18704,7 +18704,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18771,7 +18771,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18838,7 +18838,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18905,7 +18905,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -18972,7 +18972,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19039,7 +19039,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19106,7 +19106,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19172,7 +19172,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19239,7 +19239,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19306,7 +19306,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19373,7 +19373,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19440,7 +19440,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19507,7 +19507,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19574,7 +19574,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19641,7 +19641,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19708,7 +19708,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19775,7 +19775,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19842,7 +19842,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19909,7 +19909,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -19976,7 +19976,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20043,7 +20043,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20110,7 +20110,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20177,7 +20177,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20244,7 +20244,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20310,7 +20310,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20376,7 +20376,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20443,7 +20443,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20510,7 +20510,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20577,7 +20577,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20644,7 +20644,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20711,7 +20711,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20778,7 +20778,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20845,7 +20845,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20912,7 +20912,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -20979,7 +20979,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21046,7 +21046,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21112,7 +21112,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21178,7 +21178,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21245,7 +21245,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21312,7 +21312,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21379,7 +21379,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21446,7 +21446,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21513,7 +21513,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21580,7 +21580,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21647,7 +21647,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21714,7 +21714,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21781,7 +21781,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21848,7 +21848,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21915,7 +21915,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -21982,7 +21982,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22049,7 +22049,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22116,7 +22116,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22183,7 +22183,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22250,7 +22250,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22316,7 +22316,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22383,7 +22383,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22450,7 +22450,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22517,7 +22517,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22584,7 +22584,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22651,7 +22651,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22718,7 +22718,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22784,7 +22784,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22851,7 +22851,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22918,7 +22918,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -22985,7 +22985,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23052,7 +23052,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23119,7 +23119,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23186,7 +23186,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23253,7 +23253,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23319,7 +23319,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23386,7 +23386,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23453,7 +23453,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23520,7 +23520,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23587,7 +23587,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23654,7 +23654,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23721,7 +23721,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23788,7 +23788,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23855,7 +23855,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23922,7 +23922,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -23989,7 +23989,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24056,7 +24056,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24123,7 +24123,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24190,7 +24190,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24257,7 +24257,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24324,7 +24324,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24389,7 +24389,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24456,7 +24456,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24522,7 +24522,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24589,7 +24589,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24656,7 +24656,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24723,7 +24723,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24790,7 +24790,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24857,7 +24857,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24924,7 +24924,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -24991,7 +24991,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25058,7 +25058,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25125,7 +25125,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25192,7 +25192,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25259,7 +25259,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25326,7 +25326,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25393,7 +25393,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25460,7 +25460,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25527,7 +25527,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25594,7 +25594,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25661,7 +25661,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25728,7 +25728,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25795,7 +25795,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25862,7 +25862,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25929,7 +25929,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -25996,7 +25996,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26063,7 +26063,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26128,7 +26128,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26194,7 +26194,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26260,7 +26260,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26326,7 +26326,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26392,7 +26392,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26458,7 +26458,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26524,7 +26524,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26590,7 +26590,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26657,7 +26657,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26724,7 +26724,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26790,7 +26790,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26856,7 +26856,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26922,7 +26922,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -26989,7 +26989,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27055,7 +27055,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27122,7 +27122,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27189,7 +27189,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27255,7 +27255,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27322,7 +27322,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27389,7 +27389,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27456,7 +27456,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27523,7 +27523,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27590,7 +27590,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27657,7 +27657,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27723,7 +27723,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27789,7 +27789,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27856,7 +27856,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27922,7 +27922,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -27988,7 +27988,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -28054,7 +28054,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -28120,7 +28120,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -28186,7 +28186,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -28253,7 +28253,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -28319,7 +28319,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -28386,7 +28386,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -28453,7 +28453,7 @@ echo -e "$red-------------------------------------------------------------------
 
 echo ""
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -28512,7 +28512,7 @@ echo -e "$red-------------------------------------------------------------------
 echo -e "$aquamarine                                              Search open RDP.$colorbase"
 echo -e "$red--------------------------------------------------------------------------------------------------------$green"
 echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
-trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+trap 'echo "Return to Main Menu"; ./src/fuzznet.sh; exit; ./fuzznet.sh' 2
 echo ""
 rate_f () {
 read -p "Maximum number of requests per second {120-30000} : " raten
@@ -28839,9 +28839,9 @@ python2 patator.py rdp_login host=FILE0 port=$port user=$loginbrute password=FIL
 
 clear
 TESTRESULTRU
-./rdp_brute.sh
+./fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi
 fi
 
@@ -28894,9 +28894,9 @@ python2 patator.py rdp_login host=FILE0 port=$port user=FILE1 password=$passbrut
 
 clear
 TESTRESULTRU
-./rdp_brute.sh
+./fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi
 fi
 
@@ -28950,9 +28950,9 @@ clear
 TESTRESULTRU
 echo -e "$red Файл с целями пустой$colorbase"
 sleep 2
-./rdp_brute.sh
+./fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi
 fi
 
@@ -28990,17 +28990,17 @@ python2 patator.py rdp_login host=FILE0 port=$port user=FILE1 password=FILE2 0=o
 echo ""
 clear
 TESTRESULTRU
-./rdp_brute.sh
+./fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi
 fi
 
 if [ "$brutmenu" = "5" ]; then
 echo ""
-./src/rdp_brute.sh
+./src/fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi
 }
 ######################################################################################
@@ -29069,9 +29069,9 @@ python2 patator.py rdp_login host=FILE0 port=$port user=$loginbrute password=FIL
 
 clear
 TESTRESULTEN
-./rdp_brute.sh
+./fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi
 fi
 
@@ -29126,9 +29126,9 @@ python2 patator.py rdp_login host=FILE0 port=$port user=FILE1  password=$passbru
 
 clear
 TESTRESULTEN
-./rdp_brute.sh
+./fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi
 fi
 
@@ -29181,9 +29181,9 @@ python2 patator.py rdp_login host=FILE0 port=$port user=FILE1 password=FILE2 0=o
 
 clear
 TESTRESULTEN
-./rdp_brute.sh
+./fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi
 fi
 
@@ -29227,14 +29227,14 @@ echo -e "\n$red***ERROR! File for targets is empty "
 echo -e "\n$aquamarine*Press $red[ENTER] $aquamarine to return to the Main menu $colorbase"
 read -p ""
 
-./rdp_brute.sh
+./fuzznet.sh
 fi
 
 if [ "$brutmenu" = "5" ]; then
 echo ""
-./src/rdp_brute.sh
+./src/fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi
 fi
 }
@@ -29258,9 +29258,9 @@ if [ -s all_results ]
 	echo ""
 	echo -e "Нажмите$aquamarine [ENTER]$red для перехода в Главное меню"
 read -p ""
-./src/rdp_brute.sh
+./src/fuzznet.sh
 exit;
-./rdp_brute.sh	
+./fuzznet.sh	
 	else
  echo -e "$colorbase                                       +---------------------------+"
  echo -e "$colorbase                                       |$red Логин/Пароль не найден :( $colorbase|";
@@ -29269,9 +29269,9 @@ exit;
  echo -e ""
  echo -e "Нажмите$aquamarine [ENTER]$red для перехода в Главное меню"
 read -p ""
-./src/rdp_brute.sh
+./src/fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi	
 }
 ########################################################################################
@@ -29295,9 +29295,9 @@ if [ -s all_results ]
 	echo ""
 	echo -e "Нажмите$aquamarine [ENTER]$red для перехода в Главное меню"
 read -p ""
-./src/rdp_brute.sh
+./src/fuzznet.sh
 exit;
-./rdp_brute.sh	
+./fuzznet.sh	
 	else
  echo -e "$colorbase                                       +---------------------------+"
  echo -e "$colorbase                                       |$red Логин/Пароль не найден :( $colorbase|";
@@ -29306,9 +29306,9 @@ exit;
  echo -e ""
  echo -e "Нажмите$aquamarine [ENTER]$red для перехода в Главное меню"
 read -p ""
-./src/rdp_brute.sh
+./src/fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi	
 }
 ########################################################################################
@@ -29332,9 +29332,9 @@ if [ -s all_results ]
 	echo ""
  echo -e "Press$aquamarine [ENTER]$red to return to the Main menu "
 read -p ""
-./src/rdp_brute.sh
+./src/fuzznet.sh
 exit;
-./rdp_brute.sh	
+./fuzznet.sh	
 	else
  echo -e "$colorbase                                      +-----------------------------+"
  echo -e "$colorbase                                      |$red Login/Password not found :( $colorbase|";
@@ -29343,9 +29343,9 @@ exit;
  echo -e ""
  echo -e "Press$aquamarine [ENTER]$red to return to the Main menu "
 read -p ""
-./src/rdp_brute.sh
+./src/fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi	
 }
 
@@ -29367,9 +29367,9 @@ if [ -s all_results ]
  echo -e ""
  echo -e "Press$aquamarine [ENTER]$red to return to the Main menu "
 read -p ""
-./src/rdp_brute.sh
+./src/fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 	else
  echo -e "$colorbase                                      +-----------------------------+"
  echo -e "$colorbase                                      |$red Login/Password not found :( $colorbase|";
@@ -29377,9 +29377,9 @@ exit;
  echo -e ""
  echo -e "Press$aquamarine [ENTER]$red to return to the Main menu "
 read -p ""
-./src/rdp_brute.sh
+./src/fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi	
 }
 #######################################CHECKFILERU######################################
@@ -29395,9 +29395,9 @@ if [ -s open3389 ]
  echo -e ""
  echo -e "Нажмите$aquamarine [ENTER]$red для перехода в Главное меню"
 read -p ""
-./src/rdp_brute.sh
+./src/fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi
 }
 ########################################################################################
@@ -29415,9 +29415,9 @@ if [ -s open3389 ]
  echo -e ""
 echo -e "Press$aquamarine [ENTER]$red to return to the Main menu "
 read -p ""
-./src/rdp_brute.sh
+./src/fuzznet.sh
 exit;
-./rdp_brute.sh
+./fuzznet.sh
 fi
 }
 #####################################################################################
