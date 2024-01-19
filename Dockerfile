@@ -79,12 +79,16 @@ RUN apt-get update && \
     fonts-powerline\
     && rm -rf /var/lib/apt/lists/*
 
-    # tzdata
+# tzdata
 RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && \
     dpkg-reconfigure --frontend noninteractive tzdata
 
 # configure python(s)
 RUN python -m pip install --upgrade setuptools && python3 -m pip install --upgrade setuptools && python3.7 -m pip install --upgrade setuptools
+
+# seclists
+RUN cd ${HOME}/wordlists && \
+    git clone --depth 1 https://github.com/danielmiessler/SecLists.git 
 
 # Compress wordlist
 RUN cd ${HOME}/wordlists && \
