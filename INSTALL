@@ -30,7 +30,7 @@ distrp=$(cat /etc/*-release | awk -F'=' '/VERSION_CODENAME=/ {print $2}')
 		echo "deb http://archive.parrotsec.org/parrot parrot main contrib non-free" > /etc/apt/sources.list.d/parrot.list
 	
 	else
-		echo -e "$aquamarine[Скрипт тестировался только для $red[Kali Linux2 и ParrotSec]$aquamarine. Вы можете самостоятельно изменить код скрипта для своей ОС.]$colorbase"
+		echo -e "$aquamarine[The script was tested only for $red[Kali Linux2 и ParrotSec]$aquamarine. Вы можете самостоятельно изменить код скрипта для своей ОС.]$colorbase"
 		echo -e "$aquamarine[The script was tested only for $red[Kali Linux2 & ParrotSec]$aquamarine. You are free to modify the code for your operating system]$colorbase"
 	exit 1
 fi
